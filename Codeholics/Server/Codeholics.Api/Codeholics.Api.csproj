@@ -230,6 +230,7 @@
     <Content Include="Content\movingText\movingTextCss.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\templates\register.html" />
+    <Content Include="Content\templates\SignIn.html" />
     <Content Include="Global.asax" />
     <Content Include="Images\60-512.png" />
     <Content Include="Images\dark-wood-floor.jpg" />

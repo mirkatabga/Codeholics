@@ -13,15 +13,15 @@
 
     //this.get('#/my-cookie', controllers.myCookie.all);
 
-    //this.get('#/register', function (context) {
-    //    console.log("Sing up madafaka");
-    //  context.redirect('#/sign-up');
-    //});
+    this.get('#/register', function (context) {
+        console.log("Sing up madafaka");
+      context.redirect('#/sign-up');
+    });
     //this.get('#/users/register', function (context) {
     //    console.log(    "Sing up madafaka" );
     //  context.redirect('#/sign-up');
     //});
-      //this.get('#/sign-up', controllers.users.register);
+    //this.get('#/sign-up', controllers.users.register);
     this.get('#/sign-up', controllers.users.register);
   });
 
