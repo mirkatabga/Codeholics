@@ -230,13 +230,14 @@
     <Content Include="Content\movingText\movingTextCss.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\templates\register.html" />
+    <Content Include="Content\templates\SignIn.html" />
     <Content Include="Global.asax" />
     <Content Include="Images\60-512.png" />
-    <Content Include="Images\dark-wood-floor.jpg" />
-    <Content Include="Images\download.jpg" />
+    <Content Include="Images\Icons\conference.png" />
     <Content Include="Images\header-mosaics1.jpg" />
+    <Content Include="Images\Icons\assistant.png" />
+    <Content Include="Images\Icons\log_cabin.png" />
     <Content Include="Images\menuIcon.png" />
-    <Content Include="Images\Oakwood-Solid-Oak-Parquet-AB-grade-Osmo-Hardwax-Oil-Finish-14-x-90-x-300-1500mm.jpg" />
     <Content Include="Index.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
