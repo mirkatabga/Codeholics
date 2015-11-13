@@ -226,9 +226,11 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\formFields\set2.css" />
     <Content Include="Content\menuStyles\component.css" />
     <Content Include="Content\movingText\movingTextCss.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\templates\home.html" />
     <Content Include="Content\templates\register.html" />
     <Content Include="Content\templates\SignIn.html" />
     <Content Include="Global.asax" />
@@ -1439,6 +1441,8 @@
     <Content Include="Scripts\bower_components\toastr\toastr.min.css" />
     <Content Include="Scripts\bower_components\toastr\toastr.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\formFieldsJavaScript\classie.js" />
+    <Content Include="Scripts\formFieldsJavaScript\textFieldJS.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -1459,6 +1463,7 @@
     <Content Include="Scripts\SinglePageApplication\app\templates.js" />
     <Content Include="Scripts\SinglePageApplication\app\validator.js" />
     <Content Include="Scripts\SinglePageApplication\controllers\helpers\controller-helpers.js" />
+    <Content Include="Scripts\SinglePageApplication\controllers\homeController.js" />
     <Content Include="Scripts\SinglePageApplication\controllers\users.js" />
     <None Include="Scripts\_references.js" />
     <Content Include="Web.config" />
@@ -1472,7 +1477,6 @@
   <ItemGroup>
     <Content Include="Content\templates\cookie-add.handlebars" />
     <Content Include="Content\templates\cookies.handlebars" />
-    <Content Include="Content\templates\home.handlebars" />
     <Content Include="Content\templates\my-cookie.handlebars" />
   </ItemGroup>
   <ItemGroup>
@@ -1651,6 +1655,7 @@
     <Content Include="Scripts\bower_components\toastr\toastr.scss" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

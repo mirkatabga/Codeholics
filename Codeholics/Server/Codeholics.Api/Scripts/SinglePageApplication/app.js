@@ -5,11 +5,8 @@
     this.get('#/', function(context) {
       context.redirect('#/home');
     });
-
-    this.get('#/home', function (context) {
-        console.log("in home");
-    });
-    //this.get('#/home/add', controllers.home.add);
+    //this.get('#/home/', controllers.homeController.home);
+   //this.get('#/home/add', controllers.home.add);
 
     //this.get('#/my-cookie', controllers.myCookie.all);
 

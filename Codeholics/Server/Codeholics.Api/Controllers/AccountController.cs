@@ -336,7 +336,7 @@ namespace Codeholics.Api.Controllers
                 return GetErrorResult(result);
             }
 
-            return Ok();
+            return Ok(user.FirstName);
         }
 
         // POST api/Account/RegisterExternal
