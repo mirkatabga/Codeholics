@@ -1,18 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
-using Microsoft.Owin;
-using Microsoft.Owin.Security.Cookies;
-using Microsoft.Owin.Security.Google;
-using Microsoft.Owin.Security.OAuth;
-using Owin;
-using Codeholics.Api.Providers;
-using Codeholics.Api.Models;
-
-namespace Codeholics.Api
+﻿namespace Codeholics.Api
 {
+    using System;
+
+    using Microsoft.AspNet.Identity;
+    using Microsoft.Owin;
+    using Microsoft.Owin.Security.Cookies;
+    using Microsoft.Owin.Security.OAuth;
+    using Owin;
+
+    using Providers;
+    using Models;
+
     public partial class Startup
     {
         public static OAuthAuthorizationServerOptions OAuthOptions { get; private set; }
@@ -39,6 +37,7 @@ namespace Codeholics.Api
                 Provider = new ApplicationOAuthProvider(PublicClientId),
                 AuthorizeEndpointPath = new PathString("/api/Account/ExternalLogin"),
                 AccessTokenExpireTimeSpan = TimeSpan.FromDays(14),
+
                 // In production mode set AllowInsecureHttp = false
                 AllowInsecureHttp = true
             };
