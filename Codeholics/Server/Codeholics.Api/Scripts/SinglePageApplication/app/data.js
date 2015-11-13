@@ -58,11 +58,12 @@ var data = (function() {
     
     var parameters = "username=" + reqUser.username + "&password=" + reqUser.password + "&grant_type=password";
 
-    return jsonRequester.put('api/auth', options, "application/x-www-form-urlencoded")
+    return jsonRequester.post('/token', options, "application/x-www-form-urlencoded")
       .then(function(resp) {
         var user = resp.result;
         localStorage.setItem(USERNAME_LOCAL_STORAGE_KEY, user.username);
         localStorage.setItem(AUTH_KEY_LOCAL_STORAGE_KEY, resp.token_type + ' ' + resp.access_token);
+        console.log(localStorage);
         return user;
       });
   }

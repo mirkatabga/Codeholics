@@ -23,9 +23,13 @@
                     <button id="showMenu"></button>
                     <img src="Images/60-512.png" />
                     <span class="hidden-xs site-name"><a href="#/">{ Codeholics }</a></span>
-                    <div class="header-login">
-                        <a href="#/sign-in">Log In</a>
-                        <a href="#/sign-up">Register</a>
+                    <div class="header-login" id="container-sign-in">
+                        <a href="#/login">Log In</a>
+                        <a href="#/register">Register</a>
+                    </div>
+                    <div class="header-login" id="container-sign-out">
+                        <a href="">ИметоТи</a>
+                        <a href="#/logout">Logout</a>
                     </div>
                 </div>
                 <div id="content" class="container">
@@ -66,7 +70,8 @@
     <!-- App -->
     <!-- App: Controllers -->
     <script src="Scripts/SinglePageApplication/controllers/helpers/controller-helpers.js"></script>
-    <script src="Scripts/SinglePageApplication/controllers/users.js"></script>
+    <script src="Scripts/SinglePageApplication/controllers/homeController.js"></script>
+    <script src="Scripts/SinglePageApplication/controllers/usersController.js"></script>
     <!--<script src="Scripts/SinglePageApplication/controllers/home.js"></script>
     <script src="Scripts/SinglePageApplication/controllers/my-cookie.js"></script>-->
 
