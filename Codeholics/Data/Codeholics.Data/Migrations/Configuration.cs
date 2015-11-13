@@ -30,18 +30,18 @@ namespace Codeholics.Data.Migrations
             //    );
             //
 
-            context.Projects.AddOrUpdate(
-                pr => pr.Title,
-                    new Project
-                    {
-                        StartDate = DateTime.Now,
-                        Title = "StudentSystem",
-                        Description = "This is vary meanongfull description, so much that i can't stop writing",
-                        Creator = "Pesho"
-                    }
-                );
+            //context.Projects.AddOrUpdate(
+            //    pr => pr.Title,
+            //        new Project
+            //        {
+            //            StartDate = DateTime.Now,
+            //            Title = "StudentSystem",
+            //            Description = "This is vary meanongfull description, so much that i can't stop writing",
+            //            Creator = "Pesho"
+            //        }
+            //    );
 
-            context.SaveChanges();
+            //context.SaveChanges();
         }
     }
 }
