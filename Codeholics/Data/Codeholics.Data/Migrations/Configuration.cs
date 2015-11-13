@@ -31,6 +31,7 @@ namespace Codeholics.Data.Migrations
             //
 
             context.Projects.AddOrUpdate(
+                pr => pr.Title,
                     new Project
                     {
                         StartDate = DateTime.Now,

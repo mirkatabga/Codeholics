@@ -8,6 +8,7 @@
     using Models.Project;
     using AutoMapper.QueryableExtensions;
 
+    [Authorize]
     [RoutePrefix("api/Projects")]
     public class ProjectsController : ApiController
     {
