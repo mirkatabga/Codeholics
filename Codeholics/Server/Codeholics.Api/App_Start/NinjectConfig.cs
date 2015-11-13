@@ -1,5 +1,5 @@
-[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(Codeholics.Api.App_Start.NinjectWebCommon), "Start")]
-[assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(Codeholics.Api.App_Start.NinjectWebCommon), "Stop")]
+[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(Codeholics.Api.App_Start.NinjectConfig), "Start")]
+[assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(Codeholics.Api.App_Start.NinjectConfig), "Stop")]
 
 namespace Codeholics.Api.App_Start
 {
@@ -10,11 +10,14 @@ namespace Codeholics.Api.App_Start
 
     using Ninject;
     using Ninject.Web.Common;
+    using Ninject.Extensions.Conventions;
+
     using Data;
     using Services.Data.Contracts;
     using Services.Data;
+    using Common.Constants;
 
-    public static class NinjectWebCommon 
+    public static class NinjectConfig 
     {
         private static readonly Bootstrapper bootstrapper = new Bootstrapper();
 
@@ -70,11 +73,9 @@ namespace Codeholics.Api.App_Start
             kernel.Bind<ICodeholicsData>()
                 .To<CodeholicsData>();
 
-            kernel.Bind<IUsersService>()
-                .To<UsersService>();
-
-            kernel.Bind<IProjectsService>()
-                .To<ProjectsService>();
+            kernel.Bind(b => b.From(Assemblies.DataServices)
+                .SelectAllClasses()
+                .BindDefaultInterface());
         }        
     }
 }
