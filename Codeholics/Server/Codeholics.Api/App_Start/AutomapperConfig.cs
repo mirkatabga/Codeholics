@@ -7,8 +7,6 @@
 
     using AutoMapper;
     using Infrastructures.Mapping;
-    using Codeholics.Models;
-    using Models;
 
     public class AutoMapperConfig
     {
