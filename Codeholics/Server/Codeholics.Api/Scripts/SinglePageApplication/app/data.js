@@ -1,6 +1,6 @@
 var data = (function() {
-  const USERNAME_LOCAL_STORAGE_KEY = 'signed-in-user-username',
-    AUTH_KEY_LOCAL_STORAGE_KEY = 'signed-in-user-auth-key';
+  const USERNAME_LOCAL_STORAGE_KEY = 'Username',
+    AUTH_KEY_LOCAL_STORAGE_KEY = 'Authorization';
 
   const USERNAME_CHARS = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890_.",
     USERNAME_MIN_LENGTH = 6,
@@ -47,19 +47,22 @@ var data = (function() {
     }
 
     var reqUser = {
-      username: user.username,
-      passHash: CryptoJS.SHA1(user.username + user.password).toString()
+        username: user.username,
+        password: user.password
+      //passHash: CryptoJS.SHA1(user.username + user.password).toString()
     };
 
     var options = {
       data: reqUser
     };
+    
+    var parameters = "username=" + reqUser.username + "&password=" + reqUser.password + "&grant_type=password";
 
-    return jsonRequester.put('api/auth', options)
+    return jsonRequester.put('api/auth', options, "application/x-www-form-urlencoded")
       .then(function(resp) {
         var user = resp.result;
         localStorage.setItem(USERNAME_LOCAL_STORAGE_KEY, user.username);
-        localStorage.setItem(AUTH_KEY_LOCAL_STORAGE_KEY, user.authKey);
+        localStorage.setItem(AUTH_KEY_LOCAL_STORAGE_KEY, resp.token_type + ' ' + resp.access_token);
         return user;
       });
   }
