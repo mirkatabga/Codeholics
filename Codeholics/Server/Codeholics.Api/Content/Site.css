@@ -48,8 +48,12 @@
         margin-top: 10px;
         font-size: 30px;
         font-family: 'Harlow Solid';
-        color: #34495e;
     }
+
+        .wrapper #header span a {
+            color: #3c3c3b;
+            padding: 5px;
+        }
 
     .wrapper #header .header-login {
         float: right;
@@ -58,8 +62,10 @@
     }
 
         .wrapper #header .header-login a {
-            margin-right: 30px;
+            margin-right: 25px;
+            padding: 5px;
             font-size: 25px;
+            color: #3c3c3b;
         }
 
 .effect-airbnb .outer-nav img {
