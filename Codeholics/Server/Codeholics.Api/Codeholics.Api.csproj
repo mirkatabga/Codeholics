@@ -1442,7 +1442,7 @@
     <Content Include="Scripts\bower_components\toastr\toastr.min.css" />
     <Content Include="Scripts\bower_components\toastr\toastr.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\formFieldsJavaScript\classie.js" />
+    <Content Include="Scripts\formFieldsJavaScript\classieFields.js" />
     <Content Include="Scripts\formFieldsJavaScript\textFieldJS.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
