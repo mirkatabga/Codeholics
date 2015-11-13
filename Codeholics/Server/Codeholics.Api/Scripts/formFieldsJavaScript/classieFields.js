@@ -1,11 +1,11 @@
 ﻿/*!
- * classie - class helper functions
+ * classieFields - class helper functions
  * from bonzo https://github.com/ded/bonzo
  * 
- * classie.has( elem, 'my-class' ) -> true/false
- * classie.add( elem, 'my-new-class' )
- * classie.remove( elem, 'my-unwanted-class' )
- * classie.toggle( elem, 'my-class' )
+ * classieFields.has( elem, 'my-class' ) -> true/false
+ * classieFields.add( elem, 'my-new-class' )
+ * classieFields.remove( elem, 'my-unwanted-class' )
+ * classieFields.toggle( elem, 'my-class' )
  */
 
 /*jshint browser: true, strict: true, undef: true */
@@ -55,7 +55,7 @@
         fn(elem, c);
     }
 
-    var classie = {
+    var classieFields = {
         // full names
         hasClass: hasClass,
         addClass: addClass,
@@ -71,10 +71,11 @@
     // transport
     if (typeof define === 'function' && define.amd) {
         // AMD
-        define(classie);
+        define(classieFields);
     } else {
         // browser global
-        window.classie = classie;
+        window.classieFields = classieFields;
     }
 
 })(window);
+
