@@ -235,6 +235,7 @@
     <Content Include="Content\templates\sign-in.html" />
     <Content Include="Global.asax" />
     <Content Include="Images\60-512.png" />
+    <Content Include="Images\AR_pattern3.png" />
     <Content Include="Images\Icons\conference.png" />
     <Content Include="Images\header-mosaics1.jpg" />
     <Content Include="Images\Icons\assistant.png" />
