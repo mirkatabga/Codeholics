@@ -232,7 +232,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Content\templates\home.html" />
     <Content Include="Content\templates\register.html" />
-    <Content Include="Content\templates\SignIn.html" />
+    <Content Include="Content\templates\sign-in.html" />
     <Content Include="Global.asax" />
     <Content Include="Images\60-512.png" />
     <Content Include="Images\Icons\conference.png" />
@@ -1464,7 +1464,7 @@
     <Content Include="Scripts\SinglePageApplication\app\validator.js" />
     <Content Include="Scripts\SinglePageApplication\controllers\helpers\controller-helpers.js" />
     <Content Include="Scripts\SinglePageApplication\controllers\homeController.js" />
-    <Content Include="Scripts\SinglePageApplication\controllers\users.js" />
+    <Content Include="Scripts\SinglePageApplication\controllers\usersController.js" />
     <None Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
