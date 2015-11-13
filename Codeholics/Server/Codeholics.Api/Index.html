@@ -18,10 +18,14 @@
         <div class="content-container">
             <div class="wrapper">
                 <div id="header">
-                    <button id="showMenu" class="btn btn-success">Show Menu</button>
+                    <div class="top-header"></div>
+                    <button id="showMenu"></button>
+                    <img src="Images/60-512.png" />
                     <span class="hidden-xs site-name"><a href="#/">{ Codeholics }</a></span>
-                    <a href="#/sign-in">Log In</a>
-                    <a href="#/sign-up">Register</a>
+                    <div class="header-login">
+                        <a href="#/sign-in">Log In</a>
+                        <a href="#/sign-up">Register</a>
+                    </div>
                 </div>
                 <div id="content" class="container">
 
@@ -29,18 +33,20 @@
             </div>
         </div>
         <nav class="outer-nav left vertical">
+            <img src="Images/Icons/log_cabin.png" />
             <a href="#" class="icon-home">Home</a>
-            <a href="#" class="icon-news">News</a>
-            <a href="#" class="icon-image">Images</a>
-            <a href="#" class="icon-upload">Uploads</a>
-            <a href="#" class="icon-star">Favorites</a>
-            <a href="#" class="icon-mail">Messages</a>
-            <a href="#" class="icon-lock">Security</a>
+            <br />
+            <img src="Images/Icons/assistant.png" />
+            <a href="#" class="icon-news">Contact Us</a>
+            <br />
+            <img src="Images/Icons/conference.png" />
+            <a href="#" class="icon-image">About Us</a>
         </nav>
     </div>
     <!--Scripts-->
     <script src="Scripts/menuJavaScript/classie.js"></script>
     <script src="Scripts/menuJavaScript/menu.js"></script>
+
     <!--Libs-->
     <script src="Scripts/modernizr-2.6.2.js"></script>
     <script src="Scripts/menuJavaScript/classie.js"></script>
@@ -55,18 +61,21 @@
     <script src="Scripts/bower_components/moment/moment.js"></script>
     <script src="Scripts/bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="Scripts/bower_components/toastr/toastr.js"></script>
+
     <!-- App -->
     <!-- App: Controllers -->
     <script src="Scripts/SinglePageApplication/controllers/helpers/controller-helpers.js"></script>
     <script src="Scripts/SinglePageApplication/controllers/users.js"></script>
     <!--<script src="Scripts/SinglePageApplication/controllers/home.js"></script>
     <script src="Scripts/SinglePageApplication/controllers/my-cookie.js"></script>-->
+
     <!-- App: Loaders -->
     <script src="Scripts/SinglePageApplication/app/polyfills/array.js"></script>
     <script src="Scripts/SinglePageApplication/app/data.js"></script>
     <script src="Scripts/SinglePageApplication/app/templates.js"></script>
     <script src="Scripts/SinglePageApplication/app/json-requester.js"></script>
     <script src="Scripts/SinglePageApplication/app/validator.js"></script>
+
     <!-- App: Start -->
     <script src="Scripts/SinglePageApplication/app.js"></script>
 </body>

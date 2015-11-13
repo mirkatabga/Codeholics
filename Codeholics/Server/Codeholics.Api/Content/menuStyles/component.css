@@ -117,7 +117,9 @@
 	white-space: nowrap;
 	font-weight: 300;
 	margin: 0 0 30px 0;
-	color: #fff;
+    font-family: fantasy;
+    font-size:40px;
+	color: #34495e;
 	-webkit-transition: color 0.3s;
 	transition: color 0.3s;
 	-webkit-transform-style: preserve-3d;
@@ -125,7 +127,8 @@
 }
 
 .outer-nav a:hover {
-	color: #ffdccd;
+    color:#333;
+    text-decoration:none;
 }
 
 .outer-nav.vertical a {
@@ -156,7 +159,7 @@
 
 /* Effect airbnb */
 .effect-airbnb {
-	background: #b8b6b4;
+    background-image: url('../../Images/AR_pattern3.png');
 }
 
 .effect-airbnb .content-container {
@@ -181,6 +184,7 @@
 	transform: translateX(-150px);
 	-webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
 	transition: transform 0.4s, opacity 0.4s;
+    display:inline-block;
 }
 
 .effect-airbnb.animate .outer-nav a {
@@ -245,7 +249,7 @@
 }
 
 .effect-moveleft .outer-nav a {
-	color: #e86a32;
+	color: #34495e;
 	opacity: 0;
 	-webkit-transform: translateX(100px) translateZ(-1000px);
 	transform: translateX(100px) translateZ(-1000px);
