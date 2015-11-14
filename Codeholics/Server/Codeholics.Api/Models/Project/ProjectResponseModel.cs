@@ -5,9 +5,11 @@
     using AutoMapper;
     using System;
 
-    public class ProjectResponseModel : IMapFrom<User>, IHaveCustomMappings
+    public class ProjectResponseModel : IMapFrom<Project>, IHaveCustomMappings
     {
         public string Title { get; set; }
+
+        public string Description { get; set; }
 
         public DateTime StartDate { get; set; }
 

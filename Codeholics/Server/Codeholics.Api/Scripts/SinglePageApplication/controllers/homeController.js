@@ -1,7 +1,11 @@
 ﻿var controllers = controllers || {};
 (function (scope) {
 
-    data.users.loginManager();
+    var isLogged = data.users.loginManager();
+
+    //if (isLogged) {
+    //    document.redirect('#/myhome');
+    //}
 
     function home(context) {
         templates.get('home')
