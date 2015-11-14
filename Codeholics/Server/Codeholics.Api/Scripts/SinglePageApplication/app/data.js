@@ -119,6 +119,22 @@ var data = (function () {
           })
     }
 
+    function projectsAdd(title, description, startDate, deadline, creator) {
+        var options = {
+            data: {
+                title: title,
+                description: description,
+                startDate: startDate,
+                deadline: deadline,
+                creator: creator
+            }
+        }
+        return jsonRequester.post("api/Projects", options, 'application/json')
+          .then(function (res) {
+              return res;
+          })
+    }
+
     /* Cookies start*/
 
     function cookiesGet() {
@@ -241,7 +257,8 @@ var data = (function () {
             get: categoriesGet
         },
         projects: {
-            all: projectsAll
+            all: projectsAll,
+            add: projectsAdd
         }
     };
 

@@ -30,8 +30,30 @@
 
     }
 
+    function addProject(context) {
+        var title = $('#title'),
+            description = $('#description'),
+            startDate = $('#startDate'),
+            deadline = $('#deadline'),
+            creator = $('#creator');
+
+        data.projects.add(title,description,startDate,deadline,creator)
+            .then(function (res) {
+                templates.get("home-projects")
+                    .then(function (template) {
+                        context.$element().html(template({ projects: res }));
+                    })
+            },
+            function (err) {
+                console.log(err);
+            })
+
+
+    }
+
     scope.homeController = {
         home: home,
-        homeProjects: homeProjects
+        homeProjects: homeProjects,
+        addProject: addProject
     };
 }(controllers));
