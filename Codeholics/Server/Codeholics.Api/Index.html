@@ -29,8 +29,8 @@
                         <a href="#/register">Register</a>
                     </div>
                     <div class="header-login" id="container-sign-out">
-                        <a href="">ИметоТи</a>
-                        <a href="#/logout">Logout</a>
+                        <a href="" id="userName">ИметоТи</a>
+                        <a href="#/logout" id="btn-sign-out">Logout</a>
                     </div>
                 </div>
                 <div id="content" class="body-container">
@@ -67,6 +67,13 @@
     <script src="Scripts/bower_components/moment/moment.js"></script>
     <script src="Scripts/bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="Scripts/bower_components/toastr/toastr.js"></script>
+    
+     <!-- App: Loaders -->
+    <script src="Scripts/SinglePageApplication/app/polyfills/array.js"></script>
+    <script src="Scripts/SinglePageApplication/app/data.js"></script>
+    <script src="Scripts/SinglePageApplication/app/templates.js"></script>
+    <script src="Scripts/SinglePageApplication/app/json-requester.js"></script>
+    <script src="Scripts/SinglePageApplication/app/validator.js"></script>
 
     <!-- App -->
     <!-- App: Controllers -->
@@ -75,13 +82,6 @@
     <script src="Scripts/SinglePageApplication/controllers/usersController.js"></script>
     <!--<script src="Scripts/SinglePageApplication/controllers/home.js"></script>
     <script src="Scripts/SinglePageApplication/controllers/my-cookie.js"></script>-->
-
-    <!-- App: Loaders -->
-    <script src="Scripts/SinglePageApplication/app/polyfills/array.js"></script>
-    <script src="Scripts/SinglePageApplication/app/data.js"></script>
-    <script src="Scripts/SinglePageApplication/app/templates.js"></script>
-    <script src="Scripts/SinglePageApplication/app/json-requester.js"></script>
-    <script src="Scripts/SinglePageApplication/app/validator.js"></script>
 
     <!-- App: Start -->
     <script src="Scripts/SinglePageApplication/app.js"></script>

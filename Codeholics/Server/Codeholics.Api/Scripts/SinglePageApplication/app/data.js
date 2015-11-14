@@ -93,6 +93,15 @@ var data = (function() {
       });
   }
 
+  function loginManager() {
+      if (data.users.hasUser()) {
+          $('#userName').html(localStorage.getItem(USERNAME_LOCAL_STORAGE_KEY));
+          $('#container-sign-in').hide();
+      } else {
+          $('#container-sign-out').hide();
+      }
+  }
+
   /* Cookies start*/
 
   function cookiesGet() {
@@ -199,7 +208,8 @@ var data = (function() {
       signIn: signIn,
       signOut: signOut,
       hasUser: hasUser,
-      get: usersGet
+      get: usersGet,
+      loginManager: loginManager
     },
     cookies: {
       get: cookiesGet,

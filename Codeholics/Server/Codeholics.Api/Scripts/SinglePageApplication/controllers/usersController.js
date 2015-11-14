@@ -1,6 +1,8 @@
 var controllers = controllers || {};
 (function (scope) {
 
+    data.users.loginManager();
+
     function register(context) {
         templates.get('register')
           .then(function (template) {
@@ -48,7 +50,7 @@ var controllers = controllers || {};
                       password: $('#tb-password').val()
                   };
                   console.log("USER BEE");
-                  console.log(  user);
+                  console.log(user);
                   data.users.signIn(user)
                     .then(function (user) {
                         toastr.success('User signed in!');
@@ -68,20 +70,18 @@ var controllers = controllers || {};
     }
 
     function logout(context) {
-        $('#btn-sign-out').on('click', function () {
-            data.users.signOut()
-              .then(function () {
-                  toastr.success('User signed out!');
-                  //document.location = '#/register';
-                  document.location = '#/home';
-                  //setTimeout(function () {
-                  //    $('#container-sign-out').fadeOut(100, function () {
-                  //        console.log('Here!');
-                  //        $('#container-sign-in').fadeIn(500);
-                  //    });
-                  //}, 1000);
-              });
-        });
+        data.users.signOut()
+          .then(function () {
+              toastr.success('User signed out!');
+              //document.location = '#/register';
+              document.location = '#/home';
+              //setTimeout(function () {
+              //    $('#container-sign-out').fadeOut(100, function () {
+              //        console.log('Here!');
+              //        $('#container-sign-in').fadeIn(500);
+              //    });
+              //}, 1000);
+          });
     }
 
     scope.usersController = {
