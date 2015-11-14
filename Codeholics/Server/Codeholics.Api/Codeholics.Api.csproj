@@ -231,6 +231,7 @@
     <Content Include="Content\movingText\movingTextCss.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\templates\about-us.html" />
+    <Content Include="Content\templates\home-projects.html" />
     <Content Include="Content\templates\home.html" />
     <Content Include="Content\templates\my-profile.html" />
     <Content Include="Content\templates\register.html" />
