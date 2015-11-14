@@ -1,6 +1,7 @@
 var data = (function() {
-  const USERNAME_LOCAL_STORAGE_KEY = 'Username',
-    AUTH_KEY_LOCAL_STORAGE_KEY = 'Authorization';
+  const USERNAME_LOCAL_STORAGE_KEY = 'userName',
+    AUTH_KEY_LOCAL_STORAGE_KEY = 'Authorization',
+    USER_ID = "userId";
 
   const USERNAME_CHARS = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890_@.",
     USERNAME_MIN_LENGTH = 6,
@@ -62,6 +63,13 @@ var data = (function() {
         var username = resp.userName;
         localStorage.setItem(USERNAME_LOCAL_STORAGE_KEY, username);
         localStorage.setItem(AUTH_KEY_LOCAL_STORAGE_KEY, resp.token_type + ' ' + resp.access_token);
+          jsonRequester.post('api/Users', {
+              data: { "username" : localStorage.getItem(USERNAME_LOCAL_STORAGE_KEY) }
+          })
+          .then(function (response) {
+              var id = response;
+              localStorage.setItem(USER_ID, id);
+          });
         console.log(localStorage);
         return user;
       });
@@ -69,8 +77,10 @@ var data = (function() {
 
   function signOut() {
     var promise = new Promise(function(resolve, reject) {
-      localStorage.removeItem(USERNAME_LOCAL_STORAGE_KEY);
-      localStorage.removeItem(AUTH_KEY_LOCAL_STORAGE_KEY);
+      //localStorage.removeItem(USERNAME_LOCAL_STORAGE_KEY);
+      //localStorage.removeItem(AUTH_KEY_LOCAL_STORAGE_KEY);
+        //localStorage.removeItem(USER_ID);
+        localStorage.clear();
       resolve();
     });
     return promise;
@@ -79,18 +89,6 @@ var data = (function() {
   function hasUser() {
     return !!localStorage.getItem(USERNAME_LOCAL_STORAGE_KEY) &&
       !!localStorage.getItem(AUTH_KEY_LOCAL_STORAGE_KEY);
-  }
-
-  function usersGet() {
-    var options = {
-      headers: {
-        'x-auth-key': localStorage.getItem(AUTH_KEY_LOCAL_STORAGE_KEY)
-      }
-    };
-    return jsonRequester.get('api/users', options)
-      .then(function(res) {
-        return res.result;
-      });
   }
 
   function loginManager() {
@@ -104,105 +102,14 @@ var data = (function() {
       $(".header-login").css('display', 'inline-block');
   }
 
-  /* Cookies start*/
-
-  function cookiesGet() {
-    return jsonRequester.get('api/cookies')
-      .then(function(res) {
-        return res.result;
-      });
-  }
-
-  function cookiesAdd(cookie) {
-
-    var error = validator.validateString(cookie.text, COOKIE_TEXT_MIN_LENGTH, COOKIE_TEXT_MAX_LENGTH);
-    if (error) {
-      return Promise.reject('Text ' + error.message);
-    }
-
-    error = validator.validateString(cookie.category, COOKIE_CATEGORY_MIN_LENGTH, COOKIE_CATEGORY_MAX_LENGTH);
-    if (error) {
-      return Promise.reject('Category ' + error.message);
-    }
-
-    error = validator.validateUrl(cookie.img);
-    if (error) {
-      return Promise.reject(error.message);
-    }
-
-    var options = {
-      headers: {
-        'x-auth-key': localStorage.getItem(AUTH_KEY_LOCAL_STORAGE_KEY)
-      },
-      data: cookie
-    };
-    return jsonRequester.post('api/cookies', options)
-      .then(function(res) {
-        return res.result;
-      });
-  }
-
-  function cookiesLike(id) {
-    var options = {
-      headers: {
-        'x-auth-key': localStorage.getItem(AUTH_KEY_LOCAL_STORAGE_KEY)
-      },
-      data: {
-        type: 'like'
+  function getCurrentUserInfo() {
+      if (localStorage.getItem(USER_ID) !== null) {
+          return jsonRequester.get('/api/Users/' + localStorage.getItem(USER_ID))
+            .then(function (resp) {
+                return user = resp;
+            });
       }
-    };
-
-    return jsonRequester.put('api/cookies/' + id, options)
-      .then(function(res) {
-        return res.result;
-      });
   }
-
-  function cookiesDislike(id) {
-    var options = {
-      headers: {
-        'x-auth-key': localStorage.getItem(AUTH_KEY_LOCAL_STORAGE_KEY)
-      },
-      data: {
-        type: 'dislike'
-      }
-    };
-
-    return jsonRequester.put('api/cookies/' + id, options)
-      .then(function(res) {
-        return res.result;
-      });
-  }
-
-  /* Cookies end */
-
-
-  /* My Cookies start */
-
-  function myCookiesGet() {
-    var options = {
-      headers: {
-        'x-auth-key': localStorage.getItem(AUTH_KEY_LOCAL_STORAGE_KEY)
-      }
-    };
-    return jsonRequester.get('api/my-cookie', options)
-      .then(function(res) {
-        return res.result;
-      });
-  }
-
-  /* My Cookies end */
-
-  /* Categories start */
-
-  function categoriesGet() {
-    return jsonRequester.get('api/categories')
-      .then(function(res) {
-        return res.result;
-      });
-  }
-  /* Categories end */
-
 
   return {
     users: {
@@ -210,20 +117,8 @@ var data = (function() {
       signIn: signIn,
       signOut: signOut,
       hasUser: hasUser,
-      get: usersGet,
-      loginManager: loginManager
-    },
-    cookies: {
-      get: cookiesGet,
-      add: cookiesAdd,
-      like: cookiesLike,
-      dislike: cookiesDislike
-    },
-    myCookies: {
-      get: myCookiesGet
-    },
-    categories: {
-      get: categoriesGet
+      loginManager: loginManager,
+      currentUser: getCurrentUserInfo
     }
   };
 

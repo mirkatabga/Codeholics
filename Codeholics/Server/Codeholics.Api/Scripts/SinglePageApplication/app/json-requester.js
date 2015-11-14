@@ -8,7 +8,11 @@ var jsonRequester = (function () {
           data = options.data || undefined;
         var promise = {};
 
+        console.log('This is sparta');
+        console.log(data);
+
         if (contentType) {
+            console.log('tova ne e json');
             promise = new Promise(function (resolve, reject) {
                 $.ajax({
                     url: url,
@@ -25,6 +29,7 @@ var jsonRequester = (function () {
                 });
             });
         } else {
+            console.log('tova e json');
             promise = new Promise(function (resolve, reject) {
                 $.ajax({
                     url: url,

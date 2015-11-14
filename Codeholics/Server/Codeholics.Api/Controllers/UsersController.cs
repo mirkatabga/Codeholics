@@ -48,5 +48,25 @@
 
             return this.Ok(result);
         }
+
+        public IHttpActionResult Post(UserByUsernameRequestModel model)
+        {
+            if (string.IsNullOrEmpty(model.UserName))
+            {
+                return this.BadRequest("User id cannot be null or empty.");
+            }
+
+            var result = this.users
+                .ByUserName(model.UserName)
+                .ProjectTo<UserResponseModel>()
+                .FirstOrDefault();
+
+            if (result == null)
+            {
+                return this.NotFound();
+            }
+
+            return this.Ok(result.Id);
+        }
     }
 }

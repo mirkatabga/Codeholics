@@ -9,5 +9,7 @@
         IQueryable<User> All(int page = 1, int pageSize = Defaults.DefaultPageSize);
 
         IQueryable<User> ById(string id);
+
+        IQueryable<User> ByUserName(string userName);
     }
 }

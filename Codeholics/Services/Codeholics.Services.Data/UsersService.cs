@@ -30,5 +30,12 @@
                 .All()
                 .Where(u => u.Id == id);
         }
+
+        public IQueryable<User> ByUserName(string userName)
+        {
+            return data.Users
+                .All()
+                .Where(u => u.UserName == userName);
+        }
     }
 }
