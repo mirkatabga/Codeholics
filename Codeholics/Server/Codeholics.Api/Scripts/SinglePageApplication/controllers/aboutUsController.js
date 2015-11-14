@@ -10,7 +10,7 @@
           });
     }
 
-    scope.homeController = {
+    scope.aboutUsController = {
         about: about
     };
 }(controllers));

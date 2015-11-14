@@ -1470,7 +1470,7 @@
     <Content Include="Scripts\SinglePageApplication\app\polyfills\array.js" />
     <Content Include="Scripts\SinglePageApplication\app\templates.js" />
     <Content Include="Scripts\SinglePageApplication\app\validator.js" />
-    <Content Include="Scripts\SinglePageApplication\controllers\aboutUsControlle.js" />
+    <Content Include="Scripts\SinglePageApplication\controllers\aboutUsController.js" />
     <Content Include="Scripts\SinglePageApplication\controllers\helpers\controller-helpers.js" />
     <Content Include="Scripts\SinglePageApplication\controllers\homeController.js" />
     <Content Include="Scripts\SinglePageApplication\controllers\usersController.js" />
