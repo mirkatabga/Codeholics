@@ -2,7 +2,7 @@ var data = (function() {
   const USERNAME_LOCAL_STORAGE_KEY = 'Username',
     AUTH_KEY_LOCAL_STORAGE_KEY = 'Authorization';
 
-  const USERNAME_CHARS = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890_.",
+  const USERNAME_CHARS = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890_@.",
     USERNAME_MIN_LENGTH = 6,
     USERNAME_MAX_LENGTH = 30;
 
@@ -50,13 +50,12 @@ var data = (function() {
         username: user.username,
         password: user.password
       //passHash: CryptoJS.SHA1(user.username + user.password).toString()
-    };
-
-    var options = {
-      data: reqUser
-    };
+    };   
     
     var parameters = "username=" + reqUser.username + "&password=" + reqUser.password + "&grant_type=password";
+    var options = {
+        data: parameters
+    };
 
     return jsonRequester.post('/token', options, "application/x-www-form-urlencoded")
       .then(function(resp) {

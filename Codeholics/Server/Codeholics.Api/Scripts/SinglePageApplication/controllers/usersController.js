@@ -47,6 +47,8 @@ var controllers = controllers || {};
                       username: $('#tb-username').val(),
                       password: $('#tb-password').val()
                   };
+                  console.log("USER BEE");
+                  console.log(  user);
                   data.users.signIn(user)
                     .then(function (user) {
                         toastr.success('User signed in!');
