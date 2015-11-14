@@ -1,14 +1,33 @@
 ﻿<div class="form-inline col-md-6" id="container-sign-in">
-    <div class="form-group">
-        <label class="sr-only" for="tb-username">Username</label>
-        <input type="text" class="form-control" id="tb-username" placeholder="Username">
+    <div class="container">
+        <section class="content bgcolor-10">
+            <h2>Sign-in</h2>
+            <span class="input input--shoko">
+                <input class="input__field input__field--shoko" type="text" id="tb-username" />
+                <label class="input__label input__label--shoko" for="tb-username">
+                    <span class="input__label-content input__label-content--shoko">Username</span>
+                </label>
+                <svg class="graphic graphic--shoko" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+                    <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0" />
+                    <path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0" />
+                </svg>
+            </span>
+            <span class="input input--shoko">
+                <input class="input__field input__field--shoko" type="password" id="tb-password" />
+                <label class="input__label input__label--shoko" for="tb-password">
+                    <span class="input__label-content input__label-content--shoko">Password</span>
+                </label>
+                <svg class="graphic graphic--shoko" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+                    <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0" />
+                    <path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0" />
+                </svg>
+            </span>
+        </section>
+        <button id="btn-sign-in" class="btn btn-default">Sign in</button>
+        <br />
+        or
+        <big><a href="#/register">register</a></big>
     </div>
-    <div class="form-group">
-        <label class="sr-only" for="tb-password">Password</label>
-        <input type="password" class="form-control" id="tb-password" placeholder="Password">
-    </div>
-    <button id="btn-sign-in" class="btn btn-default">Sign in</button>
-    <br />
-    or
-    <big><a href="#/register">register</a></big>
 </div>
+<script src="Scripts/formFieldsJavaScript/classieFields.js"></script>
+<script src="Scripts/formFieldsJavaScript/textFieldJS.js"></script>
