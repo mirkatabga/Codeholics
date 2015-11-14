@@ -217,3 +217,51 @@
     font-family: fantasy;
     margin-left: 30px;
 }
+
+.home-projects .separate-project{
+    background-color:rgba(202, 81, 0, 0.31);
+    margin-bottom:50px;
+    width:50%;border-radius:5px 5px;
+    display:inline-block;
+}
+
+.home-projects {
+    width: 100%;
+    text-align: center;
+}
+
+    .home-projects a {
+        font-family: fantasy;
+        font-size: 25px;
+        background-color: #3c3c3b;
+        color: white;
+        padding: 10px;
+        border-radius: 5px 5px;
+    }
+
+        .home-projects a:hover {
+            text-decoration: none;
+        }
+
+        .home-projects a:active {
+            text-decoration: none;
+            background-color: rgba(60, 60, 59, 0.89);
+        }
+
+        .home-projects a:focus {
+            text-decoration: none;
+        }
+
+    .home-projects h3 {
+        color:#ca5100;
+        border-bottom:2px solid #ca5100;
+        font-family:fantasy;
+    }
+    .home-projects span{
+        color:#3c3c3b;
+        font-size:25px;
+    }
+    .home-projects div{
+         color:#3c3c3b;
+        font-size:15px;
+    }

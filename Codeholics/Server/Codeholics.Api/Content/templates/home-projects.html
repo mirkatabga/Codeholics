@@ -1,20 +1,29 @@
-﻿<a href="#/projects/add">Add new project</a>
-<br/>
+﻿<h1>Active Projects</h1>
+<div class="center-elements">
+    <div class="line"></div>
+</div>
+<div class="home-projects">
+    <a href="#/projects/add">Add new project</a>
+    <br />
 
-<div>
-    {{#each projects}}
-            <div>
-                <h3>{{Title}}</h3> 
-                <span>Start Date:</span>
-                <div>{{StartDate}}</div><br />
-                <span>Deadline: </span>
-                {{#if Deadline}}
-                    <div>{{Deadline}}</div><br />
-                    {{else}}
-                        <div>Not specified</div>
-                {{/if}}
-                <span>Creator: </span>
-                <div>{{Creator}}</div>
-    {{/each}}
+    <div>
+        {{#each projects}}
+        <div class="separate-project">
+            <h3>{{Title}}</h3>
+            <span>Description:</span>
+            <div>{{Description}}</div><br />
+            <span>Start Date:</span>
+            <div>{{StartDate}}</div><br />
+            <span>Deadline: </span>
+            {{#if Deadline}}
+            <div>{{Deadline}}</div><br />
+            {{else}}
+            <div>Not specified</div>
+            {{/if}}
+            <span>Creator: </span>
+            <div>{{Creator}}</div>
+        </div>
+        {{/each}}
+
     </div>
 </div>
