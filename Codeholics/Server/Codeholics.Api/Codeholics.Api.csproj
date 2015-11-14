@@ -237,11 +237,15 @@
     <Content Include="Images\1711781.jpg" />
     <Content Include="Images\60-512.png" />
     <Content Include="Images\AR_pattern3.png" />
+    <Content Include="Images\at_work_cover.jpg" />
     <Content Include="Images\Icons\conference.png" />
     <Content Include="Images\header-mosaics1.jpg" />
     <Content Include="Images\Icons\assistant.png" />
     <Content Include="Images\Icons\log_cabin.png" />
     <Content Include="Images\menuIcon.png" />
+    <Content Include="Images\o-JOB-INTERVIEW-facebook.jpg" />
+    <Content Include="Images\students-group-writing-studying.jpg" />
+    <Content Include="Images\working-together.jpg" />
     <Content Include="Index.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

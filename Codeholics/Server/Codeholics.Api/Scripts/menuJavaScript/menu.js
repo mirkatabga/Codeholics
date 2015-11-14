@@ -21,10 +21,6 @@
         return check;
     }
 
-    function closeMenu() {
-        document.getElementById("perspective").className = "perspective effect-airbnb";
-    }
-
     var docElem = window.document.documentElement,
 		// support transitions
 		support = Modernizr.csstransitions,
