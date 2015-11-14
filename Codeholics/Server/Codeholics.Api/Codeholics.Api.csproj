@@ -224,6 +224,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bookStyles\book.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\formFields\set2.css" />
@@ -245,12 +246,17 @@
     <Content Include="Images\header-mosaics1.jpg" />
     <Content Include="Images\Icons\assistant.png" />
     <Content Include="Images\Icons\log_cabin.png" />
+    <Content Include="Images\IMG_2043.JPG" />
+    <Content Include="Images\IMG_2176.JPG" />
+    <Content Include="Images\IMG_5369.JPG" />
     <Content Include="Images\menuIcon.png" />
     <Content Include="Images\o-JOB-INTERVIEW-facebook.jpg" />
     <Content Include="Images\Please sign in.png" />
+    <Content Include="Images\Sign-up-Here.png" />
     <Content Include="Images\students-group-writing-studying.jpg" />
     <Content Include="Images\working-together.jpg" />
     <Content Include="Index.html" />
+    <Content Include="Scripts\booksScripts\modernizr.custom.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\bower_components\bootstrap\dist\css\bootstrap-theme.css" />
