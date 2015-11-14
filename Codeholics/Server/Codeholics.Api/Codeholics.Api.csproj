@@ -230,7 +230,9 @@
     <Content Include="Content\menuStyles\component.css" />
     <Content Include="Content\movingText\movingTextCss.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\templates\about-us.html" />
     <Content Include="Content\templates\home.html" />
+    <Content Include="Content\templates\my-profile.html" />
     <Content Include="Content\templates\register.html" />
     <Content Include="Content\templates\sign-in.html" />
     <Content Include="Global.asax" />
@@ -1468,6 +1470,7 @@
     <Content Include="Scripts\SinglePageApplication\app\polyfills\array.js" />
     <Content Include="Scripts\SinglePageApplication\app\templates.js" />
     <Content Include="Scripts\SinglePageApplication\app\validator.js" />
+    <Content Include="Scripts\SinglePageApplication\controllers\aboutUsController.js" />
     <Content Include="Scripts\SinglePageApplication\controllers\helpers\controller-helpers.js" />
     <Content Include="Scripts\SinglePageApplication\controllers\homeController.js" />
     <Content Include="Scripts\SinglePageApplication\controllers\usersController.js" />
