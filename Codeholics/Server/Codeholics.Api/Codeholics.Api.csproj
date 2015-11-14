@@ -252,6 +252,7 @@
     <Content Include="Images\menuIcon.png" />
     <Content Include="Images\o-JOB-INTERVIEW-facebook.jpg" />
     <Content Include="Images\Please sign in.png" />
+    <Content Include="Images\Sign-up-Here.png" />
     <Content Include="Images\students-group-writing-studying.jpg" />
     <Content Include="Images\working-together.jpg" />
     <Content Include="Index.html" />

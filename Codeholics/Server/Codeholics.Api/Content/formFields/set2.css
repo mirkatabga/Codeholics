@@ -6,6 +6,8 @@
 	max-width: 350px;
 	width: calc(100% - 2em);
 	vertical-align: top;
+    text-align:center;
+    display:inline-block;
 }
 
 .input__field {
@@ -71,6 +73,8 @@
 .input--shoko {
 	overflow: hidden;
 	padding-bottom: 2.5em;
+        text-align:center;
+
 }
 
 .input__field--shoko {
@@ -127,4 +131,8 @@
 	stroke: #A58282;
 	-webkit-transform: translate3d(-66.6%, 0, 0);
 	transform: translate3d(-66.6%, 0, 0);
+}
+.form-inline{
+    text-align:center;
+    width:100%;
 }
