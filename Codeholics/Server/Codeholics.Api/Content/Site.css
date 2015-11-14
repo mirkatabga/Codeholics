@@ -233,10 +233,12 @@
     .home-projects a {
         font-family: fantasy;
         font-size: 25px;
-        background-color: #3c3c3b;
-        color: white;
+        background-color: #6b9d30;
+        color: whitesmoke;
         padding: 10px;
         border-radius: 5px 5px;
+        margin-bottom:15px;
+        display:inline-block;
     }
 
         .home-projects a:hover {
