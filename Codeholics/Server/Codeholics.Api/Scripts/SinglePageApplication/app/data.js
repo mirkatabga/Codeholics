@@ -59,8 +59,8 @@ var data = (function() {
 
     return jsonRequester.post('/token', options, "application/x-www-form-urlencoded")
       .then(function(resp) {
-        var user = resp.userName;
-        localStorage.setItem(USERNAME_LOCAL_STORAGE_KEY, user.username);
+        var username = resp.userName;
+        localStorage.setItem(USERNAME_LOCAL_STORAGE_KEY, username);
         localStorage.setItem(AUTH_KEY_LOCAL_STORAGE_KEY, resp.token_type + ' ' + resp.access_token);
         console.log(localStorage);
         return user;
