@@ -18,6 +18,8 @@
     this.get('#/logout', controllers.usersController.logout);
 
     this.get('#/aboutUs', controllers.aboutUsController.about);
+
+    this.get('#/projects', controllers.homeController.homeProjects);
   });
 
   $(function() {

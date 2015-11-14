@@ -2,13 +2,13 @@ var jsonRequester = (function () {
 
     function send(method, url, options, contentType) {
         options = options || {};
-        //contentType = contentType || 'application/json';
+        contentType = contentType || 'application/json';
 
         var headers = options.headers || {},
           data = options.data || undefined;
         var promise = {};
 
-        if (contentType) {
+        if (contentType !== 'application/json') {
             promise = new Promise(function (resolve, reject) {
                 $.ajax({
                     url: url,
@@ -29,7 +29,7 @@ var jsonRequester = (function () {
                 $.ajax({
                     url: url,
                     method: method,
-                    contentType: 'application/json',
+                    contentType: contentType,
                     headers: headers,
                     data: JSON.stringify(data),
                     success: function (res) {
@@ -46,7 +46,7 @@ var jsonRequester = (function () {
     }
 
     function get(url, options, contentType) {
-        return send('GET', url, options);
+        return send('GET', url, options, contentType);
     }
 
     function post(url, options, contentType) {
