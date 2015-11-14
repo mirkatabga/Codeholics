@@ -48,6 +48,14 @@
             <img src="Images/Icons/conference.png" />
             <a href="#" class="icon-image" onclick="closeMenu()">About Us</a>
         </nav>
+
+        <script>
+            function closeMenu() {
+                var active = document.querySelector(".perspective");
+                active.classList.remove("modalview"); 
+                active.classList.remove("animate");
+            }
+        </script>
     </div>
     <!--Scripts-->
     <script src="Scripts/menuJavaScript/classie.js"></script>
