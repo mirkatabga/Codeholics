@@ -234,6 +234,7 @@
     <Content Include="Content\templates\register.html" />
     <Content Include="Content\templates\sign-in.html" />
     <Content Include="Global.asax" />
+    <Content Include="Images\1711781.jpg" />
     <Content Include="Images\60-512.png" />
     <Content Include="Images\AR_pattern3.png" />
     <Content Include="Images\Icons\conference.png" />
