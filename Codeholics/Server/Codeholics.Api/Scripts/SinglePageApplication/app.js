@@ -7,6 +7,8 @@
     });
 
     this.get('#/home', controllers.homeController.home);
+
+    //this.get('#/myhome', controllers.homeController.homeProjects);
    //this.get('#/home/add', controllers.home.add);
 
     //this.get('#/my-cookie', controllers.myCookie.all);

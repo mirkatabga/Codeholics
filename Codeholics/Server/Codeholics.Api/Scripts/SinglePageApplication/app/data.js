@@ -94,14 +94,20 @@ var data = (function () {
     }
 
     function loginManager() {
+        var isLogged = false;
+
         if (data.users.hasUser()) {
+            isLogged = true;
             $('#userName').html(localStorage.getItem(USERNAME_LOCAL_STORAGE_KEY));
             $('#container-sign-in').hide();
         } else {
+            isLogged = false;
             $('#container-sign-out').hide();
         }
 
         $(".header-login").css('display', 'inline-block');
+
+        return isLogged;
     }
 
     /* Projects */
