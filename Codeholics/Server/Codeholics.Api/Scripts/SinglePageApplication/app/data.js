@@ -100,6 +100,8 @@ var data = (function() {
       } else {
           $('#container-sign-out').hide();
       }
+
+      $(".header-login").css('display', 'inline-block');
   }
 
   /* Cookies start*/

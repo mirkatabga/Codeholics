@@ -55,7 +55,8 @@ var controllers = controllers || {};
                     .then(function (user) {
                         toastr.success('User signed in!');
                         //document.location = '#/register';
-                        document.location = '#/home';
+                        context.redirect('#/home');
+                        document.location.reload(true);
                         //setTimeout(function () {
                         //    $('#container-sign-in').fadeOut(100, function () {
                         //        console.log('Here!');
@@ -74,7 +75,8 @@ var controllers = controllers || {};
           .then(function () {
               toastr.success('User signed out!');
               //document.location = '#/register';
-              document.location = '#/home';
+              context.redirect('#/home');
+              document.location.reload(true);
               //setTimeout(function () {
               //    $('#container-sign-out').fadeOut(100, function () {
               //        console.log('Here!');
