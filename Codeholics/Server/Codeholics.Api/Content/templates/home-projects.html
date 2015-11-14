@@ -1,10 +1,29 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-	<meta charset="utf-8" />
-</head>
-<body>
+﻿<h1>Active Projects</h1>
+<div class="center-elements">
+    <div class="line"></div>
+</div>
+<div class="home-projects">
+    <a href="#/projects/add">Add new project</a>
+    <br />
 
-</body>
-</html>
+    <div>
+        {{#each projects}}
+        <div class="separate-project">
+            <h3>{{Title}}</h3>
+            <span>Description:</span>
+            <div>{{Description}}</div><br />
+            <span>Start Date:</span>
+            <div>{{StartDate}}</div><br />
+            <span>Deadline: </span>
+            {{#if Deadline}}
+            <div>{{Deadline}}</div><br />
+            {{else}}
+            <div>Not specified</div>
+            {{/if}}
+            <span>Creator: </span>
+            <div>{{Creator}}</div>
+        </div>
+        {{/each}}
+
+    </div>
+</div>

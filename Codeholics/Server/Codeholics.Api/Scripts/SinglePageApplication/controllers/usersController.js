@@ -75,8 +75,10 @@ var controllers = controllers || {};
           .then(function () {
               toastr.success('User signed out!');
               //document.location = '#/register';
-              context.redirect('#/home');
-              document.location.reload(true);
+              setTimeout(function () {
+                  context.redirect('#/home');
+                  document.location.reload(true);
+              }, 1000);
               //setTimeout(function () {
               //    $('#container-sign-out').fadeOut(100, function () {
               //        console.log('Here!');
