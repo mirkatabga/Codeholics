@@ -58,7 +58,7 @@
     .wrapper #header .header-login {
         float: right;
         font-family: fantasy;
-        display: inline-block;
+        display: none;
     }
 
         .wrapper #header .header-login a {
@@ -161,6 +161,6 @@
 
 .text-information .important-words {
     color: #3c3c3b;
-    //font-size: 25px;
+    /*font-size: 25px;*/
     font-family: fantasy;
 }
