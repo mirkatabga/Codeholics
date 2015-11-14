@@ -58,7 +58,7 @@
     .wrapper #header .header-login {
         float: right;
         font-family: fantasy;
-        display: inline-block;
+        display: none;
     }
 
         .wrapper #header .header-login a {
